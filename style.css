@@ -1,0 +1,125 @@
+/* Define o estilo geral do corpo da página */
+body {
+    
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    text-align: center; /* Centraliza o texto */
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.fundoDaPagina{
+    position: fixed; /* Mantém o vídeo fixo no fundo, mesmo ao rolar a página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Faz o vídeo ocupar toda a largura da tela */
+    height: 100%; /* Faz o vídeo ocupar toda a altura da tela */
+    object-fit: cover; /* Garante que o vídeo preencha a tela sem distorcer */
+    z-index: -1; /* Mantém o vídeo no fundo, atrás de todos os elementos */
+}
+
+
+
+/* Estiliza o título da página */
+.titulo {
+    color: rgb(75, 75, 75); /* Cor do texto */
+    max-width: 600px; /* Define uma largura máxima */
+    margin: auto; /* Centraliza o título */
+    background: rgb(241, 241, 241, 0.70); /* Cor de fundo do título */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Sombra */
+}
+
+/* Estiliza a foto do casal */
+.fotodocasal {
+    width: 100%; /* Largura total do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 20px auto; /* Espaçamento e centralização */
+    display: block; /* Evita problemas de alinhamento */
+}
+
+/* Contêiner flexível para organizar elementos horizontalmente */
+.container2 {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 18px; /* Espaçamento entre os itens */
+}
+
+/* Define o estilo do contêiner de texto */
+.text-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estiliza os títulos dentro da página */
+h3 {
+    font-size: 20px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    padding-left: 60px; /* Recuo à esquerda */
+}
+
+/* Contêiner do carrossel */
+.carousel-container {
+    position: relative; /* Define a posição relativa para os botões */
+    width: 300%; /* Ocupa toda a largura disponível */
+    max-width: 600px; /* Define a largura máxima */
+    margin: 30px auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde as imagens que saem da área visível */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Área que contém todas as imagens do carrossel */
+.carousel {
+    display: flex; /* Exibe os slides lado a lado */
+    transition: transform 0.5s ease-in-out; /* Adiciona animação de transição */
+}
+
+/* Estiliza cada slide do carrossel */
+.slide {
+    height: 300px; /* Define a altura das imagens */
+    width: 100%; /* Ajusta a largura para ocupar toda a área */
+    display: none; /* Oculta as imagens por padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Exibe o slide ativo */
+.slide.active {
+    display: block;
+}
+
+/* Estiliza os botões de navegação do carrossel */
+button.prev, button.next {
+    position: absolute; /* Define a posição absoluta */
+    top: 50%; /* Posiciona os botões no meio vertical */
+    transform: translateY(-50%); /* Ajusta o alinhamento */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white; /* Cor do ícone da seta */
+    border: none; /* Remove a borda */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de clique */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 50%; /* Formato circular */
+}
+
+/* Posiciona o botão esquerdo */
+button.prev { left: 10px; }
+
+/* Posiciona o botão direito */
+button.next { right: 10px; }
+
+/* Muda a cor do botão ao passar o mouse */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Animação para o efeito de transição dos slides */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
