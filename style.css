@@ -48,6 +48,7 @@ body {
 
 /* Define o estilo do contêiner de texto */
 .text-container {
+    
     display: flex;
     flex-direction: column; /* Organiza os itens em coluna */
     text-align: left; /* Alinha o texto à esquerda */
@@ -55,6 +56,7 @@ body {
 
 /* Estiliza os títulos dentro da página */
 h3 {
+    
     font-size: 20px; /* Define o tamanho da fonte */
     font-weight: bold; /* Deixa o texto em negrito */
     margin-bottom: 5px; /* Espaçamento inferior */
@@ -63,6 +65,7 @@ h3 {
 
 /* Contêiner do carrossel */
 .carousel-container {
+    box-shadow: rgba(177, 13, 149, 0.647) 0px 20px 30px -10px;
     position: relative; /* Define a posição relativa para os botões */
     width: 300%; /* Ocupa toda a largura disponível */
     max-width: 600px; /* Define a largura máxima */
@@ -73,12 +76,14 @@ h3 {
 
 /* Área que contém todas as imagens do carrossel */
 .carousel {
+    
     display: flex; /* Exibe os slides lado a lado */
     transition: transform 0.5s ease-in-out; /* Adiciona animação de transição */
 }
 
 /* Estiliza cada slide do carrossel */
 .slide {
+    
     height: 300px; /* Define a altura das imagens */
     width: 100%; /* Ajusta a largura para ocupar toda a área */
     display: none; /* Oculta as imagens por padrão */
@@ -95,13 +100,14 @@ button.prev, button.next {
     position: absolute; /* Define a posição absoluta */
     top: 50%; /* Posiciona os botões no meio vertical */
     transform: translateY(-50%); /* Ajusta o alinhamento */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.332); /* Fundo semi-transparente */
     color: white; /* Cor do ícone da seta */
     border: none; /* Remove a borda */
     padding: 10px; /* Espaçamento interno */
     cursor: pointer; /* Cursor de clique */
     font-size: 18px; /* Tamanho da fonte */
     border-radius: 50%; /* Formato circular */
+    
 }
 
 /* Posiciona o botão esquerdo */
