@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div>
@@ -14,46 +15,36 @@
     </div>
     <section>
         <div class="titulo">
-            <h1 >𝓜𝓪𝓻𝓲𝓪 & 𝓦𝓮𝓫𝓮𝓻𝓼𝓸𝓷</h1>
+            <h1>𝓜𝓪𝓻𝓲𝓪 & 𝓦𝓮𝓫𝓮𝓻𝓼𝓸𝓷</h1>
             <p>Serra Talhada - 12 de Abril 2025</p>
-            <img class="fotodocasal" src="img/img1.jpeg" alt="fotodocasal" >
+            <img class="fotodocasal" src="img/img1.jpeg" alt="fotodocasal">
 
             <h2>Vamos Noivar</h2>
-            <p>O grande dia está chegando e não poderíamos estar mais animados para compartilhar com a nossa família e amigos um dos dias mais especiais das nossas vidas! Queremos muito sua presença neste dia tão importante com muita festa, amor e carinho em uma comemoração que irá marcar nossas vidas para sempre!</p>
-            <br>
-            <br>
-            <br>
-            <br>
+            <p>O grande dia está chegando e não poderíamos estar mais animados para compartilhar com a nossa família e amigos um dos dias mais especiais das nossas vidas!</p>
+            
             <div class="container2">
                 <div class="carousel-container">
-
                     <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
                     <div class="carousel">
-                        <img class="slide active" src="img/local/img1.jpeg" alt="Imagem 1">
-                        <img class="slide" src="img/local/img2.jpeg" alt="Imagem 2">
-                        <img class="slide" src="img/local/img3.jpeg" alt="Imagem 3">
-                        <img class="slide" src="img/local/img4.jpeg" alt="Imagem 4">
-                        <img class="slide" src="img/local/img5.jpeg" alt="Imagem 4">
-                        <img class="slide" src="img/local/img6.jpeg" alt="Imagem 4">
-                        <img class="slide" src="img/local/img7.jpeg" alt="Imagem 4">
-                        <img class="slide" src="img/local/img8.jpeg" alt="Imagem 4">
-                        
+                        <img class="slide active" src="img/local/img1.jpeg" alt="Imagem 1" onclick="expandirImagem(this)">
+                        <img class="slide" src="img/local/img2.jpeg" alt="Imagem 2" onclick="expandirImagem(this)">
+                        <img class="slide" src="img/local/img3.jpeg" alt="Imagem 3" onclick="expandirImagem(this)">
+                        <img class="slide" src="img/local/img4.jpeg" alt="Imagem 4" onclick="expandirImagem(this)">
                     </div>
                     <button class="next" onclick="mudarImagem(1)">&#10095;</button>
                 </div>
-                <div class="text-container" >
+                <div class="text-container">
                     <h3><strong>Localização</strong></h3>
-                    <p>A cerimônia de noivado será realizada na <strong>Chácara Recanto da Esperança, localizada na BR-232, logo após o IF-Sertão.</strong> Será um momento especial para celebrarmos juntos essa nova etapa em nossas vidas! 💍✨</p>
+                    <p>A cerimônia de noivado será realizada na <strong>Chácara Recanto da Esperança, localizada na BR-232, logo após o IF-Sertão.</strong></p>
                 </div>
             </div>
-            
         </div>
     </section>
 
-
-
-
-
-    <link rel="stylesheet" href="style.css">
+    <!-- Lightbox para expandir imagem -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Imagem Ampliada">
+    </div>
 </body>
 </html>

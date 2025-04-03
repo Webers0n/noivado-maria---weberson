@@ -34,3 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showSlide(currentIndex);
 });
+
+
+function expandirImagem(element) {
+    document.getElementById("lightbox-img").src = element.src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function fecharLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
